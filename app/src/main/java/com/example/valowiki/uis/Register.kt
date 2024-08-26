@@ -1,5 +1,6 @@
 package com.example.valowiki.uis
 
+import MainActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
-import com.example.valowiki.MainActivity
 import com.example.valowiki.R
 import com.example.valowiki.databinding.ActivityRegisterBinding
 import com.example.valowiki.models.User
