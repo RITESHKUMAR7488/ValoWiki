@@ -1,14 +1,12 @@
 package com.example.valowiki.uis
 
-import MainActivity
+import com.example.valowiki.MainActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 
 import com.example.valowiki.R
@@ -18,7 +16,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
 
 class SignIn : AppCompatActivity() {
@@ -58,7 +55,7 @@ class SignIn : AppCompatActivity() {
                     auth.signInWithEmailAndPassword(userEmail, userPassword)
                         .addOnCompleteListener(this@SignIn) { task ->
                             if (task.isSuccessful) {
-                                // Login successful, navigate to MainActivity
+                                // Login successful, navigate to com.example.valowiki.MainActivity
                                 Toast.makeText(this@SignIn, "Login Successful", Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this@SignIn, MainActivity::class.java))
                                 finish()  // Close the SignIn activity
@@ -93,7 +90,7 @@ class SignIn : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Google sign-in successful, navigate to MainActivity
+                    // Google sign-in successful, navigate to com.example.valowiki.MainActivity
                     Toast.makeText(this, "Google Sign-In Successful", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()  // Close the SignIn activity
