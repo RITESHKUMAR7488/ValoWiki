@@ -26,6 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+
                     <ImageView
                         android:id="@+id/hamburger_icon"
                         android:layout_width="40dp"
@@ -38,15 +39,45 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:tint="@color/white" />
 
+                    <TextView
+                        android:id="@+id/search_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/search_layout"
+                        android:drawableLeft="@drawable/search_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Search"
+                        android:paddingHorizontal="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/hamburger_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="15dp"
+                android:backgroundTint="#141E29"
+                app:cardCornerRadius="20dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/agents"
+                    android:layout_marginStart="230dp"/>
+
             </androidx.cardview.widget.CardView>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Hello" />
+            
 
         </LinearLayout>
 
