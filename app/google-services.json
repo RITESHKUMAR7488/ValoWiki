@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "317397700699",
+    "project_id": "valowiki-cecb8",
+    "storage_bucket": "valowiki-cecb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317397700699:android:0b65a046ee6f2b3cb1ef7e",
+        "android_client_info": {
+          "package_name": "com.example.valowiki"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnVGx_gbyQDscisVMdh1IO1duZbzAUhqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

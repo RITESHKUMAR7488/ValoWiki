@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#0F1923"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userName"
+        android:paddingTop="8dp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="Ritesh Kumar"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/inter_medium"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Logout"
+        android:fontFamily="@font/bowlby_one_sc"
+        android:textSize="15sp"
+        android:backgroundTint="#E31039"
+        android:layout_marginStart="20dp"
+        />
+
+</LinearLayout>
