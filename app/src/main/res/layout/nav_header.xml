@@ -4,8 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#0F1923"
+
     android:layout_marginStart="20dp"
-    android:layout_marginTop="16dp"
+    android:layout_marginTop="65dp"
     >
 
     <TextView
