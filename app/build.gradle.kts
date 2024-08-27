@@ -47,7 +47,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation (libs.glide)
-    implementation(libs.retrofit)
+    implementation (libs.retrofit)
     implementation (libs.gson)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
