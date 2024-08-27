@@ -1,6 +1,7 @@
 package com.example.valowiki
 
 import android.app.ActionBar
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +13,7 @@ import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.valowiki.databinding.ActivityMainBinding
+import com.example.valowiki.uis.Agents
 import com.google.android.material.navigation.NavigationView
 
 
@@ -47,6 +49,13 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Clicked Agent", Toast.LENGTH_SHORT).show()
             }
             true
+        }
+        with(binding){
+            cvAgent.setOnClickListener{
+                val intent = Intent(this@MainActivity, Agents::class.java)
+                startActivity(intent )
+            }
+
         }
     }
 

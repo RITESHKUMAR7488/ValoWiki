@@ -1,4 +1,4 @@
-package com.example.valowiki.apiinterface
+package com.example.valowiki.apiInterface
 
 
 import com.example.valowiki.models.ApiAgentResponseModel

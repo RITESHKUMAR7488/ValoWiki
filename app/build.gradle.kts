@@ -48,7 +48,7 @@ dependencies {
     implementation(libs.material)
     implementation (libs.glide)
     implementation (libs.retrofit)
-    implementation (libs.gson)
+    implementation (libs.converter.gson)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
