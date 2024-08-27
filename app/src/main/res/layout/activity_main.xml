@@ -65,19 +65,29 @@
                 android:layout_margin="15dp"
                 android:backgroundTint="#141E29"
                 app:cardCornerRadius="20dp"
+                android:elevation="20dp"
 
                 >
+                <TextView
+                    android:layout_width="225dp"
+                    android:layout_height="match_parent"
+                    android:text="AGENTS"
+                    android:gravity="center"
+                    android:fontFamily="@font/bowlby_one_sc"
+                    android:textSize="25dp"
+                    android:textColor="#FFFFFF"
+                    />
 
                 <ImageView
                     android:layout_width="122dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/agents"
+                    android:src="@drawable/agentthird"
                     android:layout_marginStart="230dp"/>
 
             </androidx.cardview.widget.CardView>
 
 
-            
+
 
         </LinearLayout>
 

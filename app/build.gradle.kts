@@ -46,6 +46,7 @@ dependencies {
     implementation (libs.play.services.auth)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation (libs.glide)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)

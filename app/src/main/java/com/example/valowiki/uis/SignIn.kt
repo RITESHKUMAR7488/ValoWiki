@@ -66,6 +66,9 @@ class SignIn : AppCompatActivity() {
                         }
                 }
             }
+            txSignUp.setOnClickListener{
+                startActivity(Intent(this@SignIn,Register::class.java))
+            }
 
         }
 
