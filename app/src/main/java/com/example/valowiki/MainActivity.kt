@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         with(binding){
             list= ArrayList()
             list.add(HomeScreenModel("Agents",R.drawable.agentthird))
-            list.add(HomeScreenModel("Gun",R.drawable.agentthird))
+            list.add(HomeScreenModel("Weapons",R.drawable.weapons))
             list.add(HomeScreenModel("Agents",R.drawable.agentthird))
             list.add(HomeScreenModel("Agents",R.drawable.agentthird))
             list.add(HomeScreenModel("Agents",R.drawable.agentthird))
