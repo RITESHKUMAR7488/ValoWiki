@@ -12,14 +12,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.valowiki.adapters.HomeAdapter
 import com.example.valowiki.databinding.ActivityMainBinding
+import com.example.valowiki.models.HomeScreenModel
 import com.example.valowiki.uis.Agents
 import com.google.android.material.navigation.NavigationView
+import java.util.ArrayList
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var toggle:ActionBarDrawerToggle
     private lateinit var binding: ActivityMainBinding
+    private lateinit var adapter: HomeAdapter
+    private lateinit var list: ArrayList<HomeScreenModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,18 +48,24 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        navView.setNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.agent ->
-                    Toast.makeText(applicationContext, "Clicked Agent", Toast.LENGTH_SHORT).show()
-            }
-            true
-        }
+
         with(binding){
-            cvAgent.setOnClickListener{
-                val intent = Intent(this@MainActivity, Agents::class.java)
-                startActivity(intent )
-            }
+            list= ArrayList()
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+            list.add(HomeScreenModel("Agents",R.drawable.agentthird))
+
+
+
+            adapter= HomeAdapter(list)
+            rvAgent.adapter=adapter
+
 
         }
     }
