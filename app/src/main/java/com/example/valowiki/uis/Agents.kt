@@ -50,13 +50,10 @@ class Agents : AppCompatActivity() {
                     val data = it.data
                     val adapter = AgentAdapter(data, this@Agents)
                     binding.rvAgents.adapter = adapter
-
                 }
-
             }
 
             "Gun" -> {
-
             }
         }
 
