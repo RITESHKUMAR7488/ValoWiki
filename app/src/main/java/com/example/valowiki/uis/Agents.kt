@@ -1,10 +1,9 @@
 package com.example.valowiki.uis
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.valowiki.MyApplication
@@ -33,14 +32,34 @@ class Agents : AppCompatActivity() {
                 this@Agents,
                 MyViewModelFactory(repository)
             )[MyViewModel::class.java]
-            viewModel.getAgent().observe(this@Agents){
-                val data = it.data
-                val adapter = AgentAdapter(data,this@Agents)
-                rvAgents.adapter = adapter
-            }
+            val tittle = intent.getStringExtra("title")
 
+            Log.d("titele", "$tittle")
+
+            getData(tittle!!)
 
         }
+
+    }
+
+    private fun getData(title: String) {
+        binding.title.text = title
+        when (title) {
+            "Agents" -> {
+                viewModel.getAgent().observe(this@Agents) {
+                    val data = it.data
+                    val adapter = AgentAdapter(data, this@Agents)
+                    binding.rvAgents.adapter = adapter
+
+                }
+
+            }
+
+            "Gun" -> {
+
+            }
+        }
+
 
     }
 }
