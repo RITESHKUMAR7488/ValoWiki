@@ -33,7 +33,7 @@ class WeaponsAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = list[position]
         val binding = (holder as ViewHolder).binding
-        Glide.with(context).load("https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png").into(binding.weaponChildImage)
+        Glide.with(context).load(item.displayIcon).into(binding.weaponChildImage)
         Log.d("imagesss", item.displayIcon)
         binding.weaponChildName.text = item.displayName
     }
