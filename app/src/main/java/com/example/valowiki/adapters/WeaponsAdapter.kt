@@ -1,13 +1,15 @@
 package com.example.valowiki.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.valowiki.adapters.AgentAdapter.ViewHolder
-import com.example.valowiki.databinding.RvAgentsChildBinding
+
+
 import com.example.valowiki.models.DataX
-import android.content.Context
+
+import android.util.Log
+import com.bumptech.glide.Glide
 import com.example.valowiki.databinding.RvWeaponChildBinding
 
 class WeaponsAdapter(
@@ -31,7 +33,8 @@ class WeaponsAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = list[position]
         val binding = (holder as ViewHolder).binding
-        Glide.with(context).load(item.displayIcon).into(binding.weaponChildImage)
+        Glide.with(context).load("https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png").into(binding.weaponChildImage)
+        Log.d("imagesss", item.displayIcon)
         binding.weaponChildName.text = item.displayName
     }
     class ViewHolder(val binding:RvWeaponChildBinding):RecyclerView.ViewHolder(binding.root)
