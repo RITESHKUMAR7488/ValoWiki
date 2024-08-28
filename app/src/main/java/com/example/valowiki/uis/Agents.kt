@@ -53,6 +53,17 @@ class Agents : AppCompatActivity() {
                     binding.rvAgents.adapter = adapter
                 }
             }
+            "Weapons" -> {
+                viewModel.getWeapons().observe(this) {
+                    val data = it.data
+                    val adapter = WeaponsAdapter(data, this)
+                    binding.rvAgents.adapter = adapter
+
+                    Log.d("dataaaa", "$data")
+
+                    getData(data.toString())
+                }
+            }
 
 
         }
