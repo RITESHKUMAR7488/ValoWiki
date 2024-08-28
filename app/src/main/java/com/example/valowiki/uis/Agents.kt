@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.valowiki.MyApplication
 import com.example.valowiki.R
 import com.example.valowiki.adapters.AgentAdapter
@@ -58,10 +59,11 @@ class Agents : AppCompatActivity() {
                     val data = it.data
                     val adapter = WeaponsAdapter(data, this)
                     binding.rvAgents.adapter = adapter
+                    binding.rvAgents.layoutManager=LinearLayoutManager(this)
 
                     Log.d("dataaaa", "$data")
 
-                    getData(data.toString())
+
                 }
             }
 
