@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.example.valowiki.apiInterface.Api
 import com.example.valowiki.models.ApiAgentResponseModel
+import com.example.valowiki.models.ApiTiersResponseModel
 import com.example.valowiki.models.ApiWeaponsResponseModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,6 +40,10 @@ class MyRepository(private val api: Api) {
 
         })
     }
+
+//    fun getTiers(data: MutableLiveData<ApiTiersResponseModel>){
+//        api.
+//    }
 
 
     }
