@@ -41,9 +41,7 @@ class MyRepository(private val api: Api) {
         })
     }
 
-//    fun getTiers(data: MutableLiveData<ApiTiersResponseModel>){
-//        api.
-//    }
+
 
 
     }

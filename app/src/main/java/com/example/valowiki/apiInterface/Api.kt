@@ -18,4 +18,7 @@ interface Api {
     @GET("tiers")
     fun getTiers(): Call<ApiTiersResponseModel>
 
+    @GET("abilities")
+    fun getAbilities(): Call<ApiAgentResponseModel>
+
 }

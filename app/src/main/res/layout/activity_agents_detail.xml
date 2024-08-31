@@ -1,217 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:background="@drawable/background_detail"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".uis.AgentsDetail">
-
-    <androidx.core.widget.NestedScrollView
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
         android:layout_width="match_parent"
+        android:background="@drawable/background_detail"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical"
+        tools:context=".uis.AgentsDetail">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/left"
+                        android:drawablePadding="60dp"
+                        android:fontFamily="@font/bowlby_one_sc"
+                        android:text="Agents Details"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/agent_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/fullportrait" />
 
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/agent_detail_name"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:drawableLeft="@drawable/left"
-                    android:drawablePadding="60dp"
+                    android:layout_height="wrap_content"
+
                     android:fontFamily="@font/bowlby_one_sc"
-                    android:text="Agents Details"
+                    android:gravity="center"
+                    android:text="gekko"
                     android:textColor="#FFFFFF"
-                    android:textSize="25sp" />
+                    android:textSize="30sp" />
+                />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Origin -->
+                    <TextView
+                        android:id="@+id/origin_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DEVELOPER NAME:"
+                        android:textColor="#FF5555"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#FF5555"
+                        app:layout_constraintBottom_toTopOf="@+id/type_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/origin_label" />
+
+                    <TextView
+                        android:id="@+id/agent_developer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aggrobot"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintBaseline_toBaselineOf="@id/origin_label"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Type -->
+                    <TextView
+                        android:id="@+id/type_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="TYPE:"
+                        android:textColor="#FF5555"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/origin_label" />
+
+                    <TextView
+                        android:id="@+id/agent_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Initiator"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintBaseline_toBaselineOf="@id/type_label"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <View
+
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#FF5555"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/type_label" />
+
+                    <!-- Points for Ultimate -->
+
+
+                    <ImageView
+                        android:id="@+id/agent_type_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/typeimage"
+                        app:layout_constraintBottom_toBottomOf="@+id/agent_type"
+                        app:layout_constraintEnd_toStartOf="@+id/agent_type"
+                        app:layout_constraintTop_toTopOf="@+id/agent_type" />
+
+                    <!-- Description -->
+                    <TextView
+                        android:id="@+id/description_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="DESCRIPTION:"
+                        android:textColor="#FF5555"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <TextView
+                        android:id="@+id/agent_description_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/description_label"
+                        app:layout_constraintTop_toTopOf="@+id/description_label" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="#FF5555" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/bowlby_one_sc"
+                    android:text="ABILITIES"
+                    android:textColor="#FF5555" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_Agent_Ability_Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:padding="16dp"
+                    tools:listitem="@layout/agent_detail_child"
+                    />
+
+
 
 
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/agent_detail_image"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:src="@drawable/fullportrait" />
-
-            <TextView
-                android:id="@+id/agent_detail_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:fontFamily="@font/bowlby_one_sc"
-                android:gravity="center"
-                android:text="Jett"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp" />
-            />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp">
-
-                <!-- Origin -->
-                <TextView
-                    android:id="@+id/origin_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DEVELOPER NAME:"
-                    android:textColor="#FF5555"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="#FF5555"
-                    app:layout_constraintBottom_toTopOf="@+id/type_label"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/origin_label" />
-
-                <TextView
-                    android:id="@+id/origin_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Aggrobot"
-                    android:textColor="#FFFFFF"
-                    app:layout_constraintBaseline_toBaselineOf="@id/origin_label"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-                <!-- Type -->
-                <TextView
-                    android:id="@+id/type_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="TYPE:"
-                    android:textColor="#FF5555"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/origin_label" />
-
-                <TextView
-                    android:id="@+id/type_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Initiator"
-                    android:textColor="#FFFFFF"
-                    app:layout_constraintBaseline_toBaselineOf="@id/type_label"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-                <View
-
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="15dp"
-                    android:background="#FF5555"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/type_label" />
-
-                <!-- Points for Ultimate -->
-
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/typeimage"
-                    app:layout_constraintBottom_toBottomOf="@+id/type_value"
-                    app:layout_constraintEnd_toStartOf="@+id/type_value"
-                    app:layout_constraintTop_toTopOf="@+id/type_value" />
-
-                <!-- Description -->
-                <TextView
-                    android:id="@+id/description_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="DESCRIPTION:"
-                    android:textColor="#FF5555"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-                <TextView
-                    android:id="@+id/description_value"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="BRIMSTONE"
-                    android:textColor="#FFFFFF"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/description_label"
-                    app:layout_constraintTop_toTopOf="@+id/description_label" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="#FF5555" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/bowlby_one_sc"
-                android:text="ABILITIES"
-                android:textColor="#FF5555" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:background="@drawable/stroke">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:fontFamily="@font/bowlby_one_sc"
-                    android:text="ABILITY 1"
-                    android:textColor="#FF5555"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/ability"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
 
 
@@ -219,4 +202,8 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
