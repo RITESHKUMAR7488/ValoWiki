@@ -8,6 +8,8 @@ import com.example.valowiki.databinding.RvAgentsChildBinding
 import com.example.valowiki.models.Data
 
 import android.content.Context
+import android.content.Intent
+import com.example.valowiki.uis.AgentsDetail
 
 class AgentAdapter (
     private val list: List<Data>,
@@ -33,6 +35,13 @@ class AgentAdapter (
         val binding = (holder as ViewHolder).binding
         Glide.with(context).load(item.fullPortrait).into(binding.agentChildImage)
         binding.agentChildName.text = item.displayName
+        binding.itemLayout.setOnClickListener {
+            val intent=Intent(context,AgentsDetail::class.java)
+            intent.putExtra("model",item)
+            context.startActivity(intent)
+
+        }
+
 
     }
 class ViewHolder(val binding: RvAgentsChildBinding) : RecyclerView.ViewHolder(binding.root){

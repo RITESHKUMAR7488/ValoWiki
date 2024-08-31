@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class Data(
     val abilities: List<Ability>,
     val assetPath: String,
@@ -23,4 +25,4 @@ data class Data(
     val role: Role,
     val uuid: String,
     val voiceLine: Any
-)
+):Serializable
