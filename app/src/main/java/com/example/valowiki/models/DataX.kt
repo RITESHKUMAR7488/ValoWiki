@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class DataX(
     val assetPath: String,
     val category: String,
@@ -11,4 +13,4 @@ data class DataX(
     val skins: List<Skin>,
     val uuid: String,
     val weaponStats: WeaponStats
-)
+): Serializable

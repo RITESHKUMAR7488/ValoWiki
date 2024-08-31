@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class WeaponStats(
     val adsStats: AdsStats,
     val airBurstStats: AirBurstStats,
@@ -16,4 +18,4 @@ data class WeaponStats(
     val runSpeedMultiplier: Double,
     val shotgunPelletCount: Int,
     val wallPenetration: String
-)
+):Serializable

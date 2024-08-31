@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class ShopData(
     val assetPath: String,
     val canBeTrashed: Boolean,
@@ -11,4 +13,4 @@ data class ShopData(
     val newImage: String,
     val newImage2: Any,
     val shopOrderPriority: Int
-)
+): Serializable

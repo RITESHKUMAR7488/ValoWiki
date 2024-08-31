@@ -1,6 +1,7 @@
 package com.example.valowiki.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ import com.example.valowiki.models.DataX
 import android.util.Log
 import com.bumptech.glide.Glide
 import com.example.valowiki.databinding.RvWeaponChildBinding
+import com.example.valowiki.uis.AgentsDetail
 
 class WeaponsAdapter(
     val list:List<DataX>,
@@ -36,6 +38,12 @@ class WeaponsAdapter(
         Glide.with(context).load(item.displayIcon).into(binding.weaponChildImage)
         Log.d("imagesss", item.displayIcon)
         binding.weaponChildName.text = item.displayName
+        binding.itemWeaponLayout.setOnClickListener {
+            val intent= Intent(context, AgentsDetail::class.java)
+            intent.putExtra("model",item)
+            context.startActivity(intent)
+
+        }
     }
     class ViewHolder(val binding:RvWeaponChildBinding):RecyclerView.ViewHolder(binding.root)
 }

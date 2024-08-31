@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.valowiki.MyApplication
 import com.example.valowiki.R
 import com.example.valowiki.adapters.AgentsAbilityDetailAdapter
@@ -24,8 +25,16 @@ class AgentsDetail : AppCompatActivity() {
         enableEdgeToEdge()
         binding=DataBindingUtil.setContentView(this,R.layout.activity_agents_detail)
         with(binding){
+            //tvName.text=model.name
+
             val data=intent.getSerializableExtra("model") as Data
             Log.d("agentData", "$data")
+            agentDetailName.text=data.displayName
+            agentDeveloperName.text=data.developerName
+            agentType.text=data.role.displayName
+            agentDescriptionText.text=data.description
+            Glide.with(this@AgentsDetail).load(data.fullPortrait).into(agentDetailImage)
+            Glide.with(this@AgentsDetail).load(data.role.displayIcon).into(agentTypeImage)
 
             val application= application as MyApplication
             val retrofitBuilder=application.retrofit

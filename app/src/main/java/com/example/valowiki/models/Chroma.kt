@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class Chroma(
     val assetPath: String,
     val displayIcon: String,
@@ -8,4 +10,4 @@ data class Chroma(
     val streamedVideo: String,
     val swatch: String,
     val uuid: String
-)
+): Serializable

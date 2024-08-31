@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class Skin(
     val assetPath: String,
     val chromas: List<Chroma>,
@@ -10,4 +12,4 @@ data class Skin(
     val themeUuid: String,
     val uuid: String,
     val wallpaper: String
-)
+) :Serializable

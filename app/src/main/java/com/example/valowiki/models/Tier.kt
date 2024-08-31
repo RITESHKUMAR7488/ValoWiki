@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class Tier(
     val backgroundColor: String,
     val color: String,
@@ -11,4 +13,4 @@ data class Tier(
     val smallIcon: String,
     val tier: Int,
     val tierName: String
-)
+): Serializable
