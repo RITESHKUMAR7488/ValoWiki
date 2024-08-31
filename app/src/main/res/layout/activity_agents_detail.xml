@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,193 +10,213 @@
     android:orientation="vertical"
     tools:context=".uis.AgentsDetail">
 
-
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_height="40dp">
-        <TextView
-            android:id="@+id/title"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#FFFFFF"
-            android:drawableLeft="@drawable/left"
-            android:drawablePadding="60dp"
-            android:fontFamily="@font/bowlby_one_sc"
-            android:textSize="25sp"
-            android:text="Agents Details"/>
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/left"
+                    android:drawablePadding="60dp"
+                    android:fontFamily="@font/bowlby_one_sc"
+                    android:text="Agents Details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
 
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/agent_detail_image"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:src="@drawable/fullportrait"/>
-    <TextView
-        android:id="@+id/agent_detail_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/agent_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fullportrait" />
 
-        android:gravity="center"
-        android:fontFamily="@font/bowlby_one_sc"
-        android:text="Jett"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"/>
-        />
+            <TextView
+                android:id="@+id/agent_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+                android:fontFamily="@font/bowlby_one_sc"
+                android:gravity="center"
+                android:text="Jett"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+            />
 
-        <!-- Origin -->
-        <TextView
-            android:id="@+id/origin_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DEVELOPER NAME:"
-            android:textColor="#FF5555"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF5555"
-            app:layout_constraintBottom_toTopOf="@+id/type_label"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/origin_label" />
+                <!-- Origin -->
+                <TextView
+                    android:id="@+id/origin_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEVELOPER NAME:"
+                    android:textColor="#FF5555"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/origin_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Aggrobot"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBaseline_toBaselineOf="@id/origin_label"
-            app:layout_constraintEnd_toEndOf="parent" />
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#FF5555"
+                    app:layout_constraintBottom_toTopOf="@+id/type_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/origin_label" />
 
-        <!-- Type -->
-        <TextView
-            android:id="@+id/type_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="TYPE:"
-            android:textColor="#FF5555"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/origin_label" />
+                <TextView
+                    android:id="@+id/origin_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aggrobot"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBaseline_toBaselineOf="@id/origin_label"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/type_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Initiator"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBaseline_toBaselineOf="@id/type_label"
-            app:layout_constraintEnd_toEndOf="parent" />
+                <!-- Type -->
+                <TextView
+                    android:id="@+id/type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="TYPE:"
+                    android:textColor="#FF5555"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/origin_label" />
 
-        <View
+                <TextView
+                    android:id="@+id/type_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initiator"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBaseline_toBaselineOf="@id/type_label"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
-            android:id="@+id/view2"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="15dp"
-            android:background="#FF5555"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/type_label" />
+                <View
 
-        <!-- Points for Ultimate -->
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#FF5555"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/type_label" />
 
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/typeimage"
-            app:layout_constraintBottom_toBottomOf="@+id/type_value"
-            app:layout_constraintEnd_toStartOf="@+id/type_value"
-            app:layout_constraintTop_toTopOf="@+id/type_value" />
-
-        <!-- Description -->
-        <TextView
-            android:id="@+id/description_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DESCRIPTION:"
-            android:textColor="#FF5555"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-        <TextView
-            android:id="@+id/description_value"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="BRIMSTONE"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/description_label"
-            app:layout_constraintTop_toTopOf="@+id/description_label" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-   <View
-       android:layout_width="match_parent"
-       android:layout_height="2dp"
-       android:background="#FF5555"
-       android:layout_marginHorizontal="16dp"
-       />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ABILITIES"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/bowlby_one_sc"
-        android:textColor="#FF5555"
-        />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/stroke"
-        >
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/bowlby_one_sc"
-            android:text="ABILITY 1"
-            android:textColor="#FF5555"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <!-- Points for Ultimate -->
 
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="10dp"
-            android:src="@drawable/ability"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/typeimage"
+                    app:layout_constraintBottom_toBottomOf="@+id/type_value"
+                    app:layout_constraintEnd_toStartOf="@+id/type_value"
+                    app:layout_constraintTop_toTopOf="@+id/type_value" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/description_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="DESCRIPTION:"
+                    android:textColor="#FF5555"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                <TextView
+                    android:id="@+id/description_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="BRIMSTONE"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/description_label"
+                    app:layout_constraintTop_toTopOf="@+id/description_label" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="#FF5555" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bowlby_one_sc"
+                android:text="ABILITIES"
+                android:textColor="#FF5555" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/stroke">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/bowlby_one_sc"
+                    android:text="ABILITY 1"
+                    android:textColor="#FF5555"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ability"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 
-</LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
