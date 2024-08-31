@@ -1,5 +1,7 @@
 package com.example.valowiki.models
 
+import java.io.Serializable
+
 data class RecruitmentData(
     val counterId: String,
     val endDate: String,
@@ -8,4 +10,4 @@ data class RecruitmentData(
     val milestoneThreshold: Int,
     val startDate: String,
     val useLevelVpCostOverride: Boolean
-)
+):Serializable

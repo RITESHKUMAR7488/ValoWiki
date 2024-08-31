@@ -24,5 +24,5 @@ data class Data(
     val recruitmentData: RecruitmentData,
     val role: Role,
     val uuid: String,
-    val voiceLine: Any
+   // val voiceLine: Any
 ):Serializable
