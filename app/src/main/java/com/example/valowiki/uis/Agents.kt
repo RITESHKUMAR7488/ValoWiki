@@ -91,7 +91,7 @@ class Agents : AppCompatActivity() {
 
             "Tiers" -> {
                 viewModel.getTiers().observe(this) {
-                    val data = it.data.first().tiers
+                    val data = it.data[0].tiers
                     val adapter = TierAdapter(data, this)
                     binding.rvAgents.adapter = adapter
 
