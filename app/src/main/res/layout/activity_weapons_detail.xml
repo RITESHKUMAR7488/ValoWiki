@@ -44,14 +44,14 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/agent_detail_image"
+                    android:id="@+id/weapon_detail_image"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:layout_gravity="center"
                     android:src="@drawable/weapons" />
 
                 <TextView
-                    android:id="@+id/agent_detail_name"
+                    android:id="@+id/weapon_detail_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -126,7 +126,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/magine_size"
+                            android:id="@+id/magazine_size"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0.76"
@@ -633,6 +633,7 @@
 
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_weapon_skin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/rv_weapon_child"

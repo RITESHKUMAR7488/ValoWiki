@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.valowiki.MyApplication
 import com.example.valowiki.R
 import com.example.valowiki.adapters.AgentAdapter
+import com.example.valowiki.adapters.MapAdapter
+import com.example.valowiki.adapters.PlayerCardAdapter
+import com.example.valowiki.adapters.TierAdapter
 import com.example.valowiki.adapters.WeaponsAdapter
 import com.example.valowiki.apiInterface.Api
 import com.example.valowiki.databinding.ActivityAgentsBinding
@@ -54,12 +57,13 @@ class Agents : AppCompatActivity() {
                     binding.rvAgents.adapter = adapter
                 }
             }
+
             "Weapons" -> {
                 viewModel.getWeapons().observe(this) {
                     val data = it.data
                     val adapter = WeaponsAdapter(data, this)
                     binding.rvAgents.adapter = adapter
-                    binding.rvAgents.layoutManager=LinearLayoutManager(this)
+                    binding.rvAgents.layoutManager = LinearLayoutManager(this)
 
                     Log.d("dataaaa", "$data")
 
@@ -67,9 +71,33 @@ class Agents : AppCompatActivity() {
                 }
             }
 
+            "Maps" -> {
+                viewModel.getMaps().observe(this) {
+                    val data = it.data
+                    val adapter = MapAdapter(data, this)
+                    binding.rvAgents.adapter = adapter
+                    binding.rvAgents.layoutManager = LinearLayoutManager(this)
+                }
+            }
 
+            "Cards" -> {
+                viewModel.getCard().observe(this) {
+                    val data = it.data
+                    val adapter = PlayerCardAdapter(data, this)
+                    binding.rvAgents.adapter = adapter
+
+                }
+            }
+
+            "Tiers" -> {
+                viewModel.getTiers().observe(this) {
+                    val data = it.data.first().tiers
+                    val adapter = TierAdapter(data, this)
+                    binding.rvAgents.adapter = adapter
+
+
+                }
+            }
         }
-
-
     }
-}
+    }
