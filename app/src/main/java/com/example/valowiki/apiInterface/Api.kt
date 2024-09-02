@@ -17,7 +17,7 @@ interface Api {
     @GET("weapons")
     fun getWeapons(): Call<ApiWeaponsResponseModel>
 
-    @GET("tiers")
+    @GET("competitivetiers")
     fun getTiers(): Call<ApiTiersResponseModel>
 
     @GET("abilities")
